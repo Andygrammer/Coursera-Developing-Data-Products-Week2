@@ -1,0 +1,31 @@
+---
+title: "Week_2"
+author: "André Marinho"
+date: "10/08/2020"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Project date
+
+```{r}
+Sys.Date()
+```
+
+## 2. Map - University of São Paulo (Brazil)
+
+```{r}
+library(leaflet)
+
+map_usp <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=-23.5613991, lng=-46.7307891, popup="USP - Campus Butantã") %>%
+  addMarkers(lat=-23.4823919, lng=-46.5026385, popup="USP - Campus Leste (EACH)") %>%
+  addMarkers(lat=-21.1725114, lng=-47.8482037, popup="USP - Campus Ribeirão Preto") %>%
+  addMarkers(lat=-22.0027496, lng=-47.9007629, popup="USP - Campus São Carlos")
+
+map_usp        
