@@ -1,9 +1,8 @@
 ---
-title: "Week_2"
+title: "Week_2 Assignment"
 author: "André Marinho"
 date: "10/08/2020"
 output: html_document
-runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
